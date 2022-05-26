@@ -5,7 +5,7 @@ import '../../utils/constants.dart';
 import 'components/carousel.dart';
 import 'components/cv_section.dart';
 import 'components/header.dart';
-import 'components/iso_app_ad.dart';
+import 'components/ios_app_ad.dart';
 import 'components/website_aid.dart';
 
 class Home extends StatelessWidget {
