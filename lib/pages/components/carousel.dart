@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/utils/constants.dart';
 import 'package:portfolio_website/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -83,8 +84,8 @@ Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
 Widget _buildTablet(BuildContext context, Widget text, Widget image) {
   return Center(
     child: ResponsiveWrapper(
-        minWidth: 760.0,
-        maxWidth: 760.0,
+        minWidth: kTabletMaxWidth,
+        maxWidth: kTabletMaxWidth,
         defaultScale: false,
         child: Row(
           children: [
@@ -99,8 +100,7 @@ Widget _buildTablet(BuildContext context, Widget text, Widget image) {
 Widget _buildMobile(BuildContext context, Widget text, Widget image) {
   return Container(
     width: double.infinity,
-    constraints:
-        BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.8),
+    constraints: BoxConstraints(maxWidth: getMobileMaxWidth(context)),
     child: text,
   );
 }
