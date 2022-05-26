@@ -73,7 +73,10 @@ class Home extends StatelessWidget {
             IosAppAd(),
             SizedBox(height: 70.0),
             WebsiteAid(),
-            PortfolioStats(),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 28.0),
+              child: PortfolioStats(),
+            ),
           ],
         ),
       ),
