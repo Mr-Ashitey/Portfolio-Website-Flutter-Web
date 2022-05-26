@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/pages/components/skill_section.dart';
+import 'package:portfolio_website/pages/components/testimonials.dart';
 import 'package:portfolio_website/utils/globals.dart';
 
 import '../../utils/constants.dart';
@@ -85,6 +86,8 @@ class Home extends StatelessWidget {
             SkillSection(),
             SizedBox(height: 50.0),
             Sponsors(),
+            SizedBox(height: 50.0),
+            Testimonials(),
           ],
         ),
       ),
