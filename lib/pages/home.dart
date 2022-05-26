@@ -9,6 +9,7 @@ import 'components/education_section.dart';
 import 'components/header.dart';
 import 'components/ios_app_ad.dart';
 import 'components/portfolio_stats.dart';
+import 'components/sponsors.dart';
 import 'components/website_aid.dart';
 
 class Home extends StatelessWidget {
@@ -82,6 +83,8 @@ class Home extends StatelessWidget {
             EducationSection(),
             SizedBox(height: 50.0),
             SkillSection(),
+            SizedBox(height: 50.0),
+            Sponsors(),
           ],
         ),
       ),
