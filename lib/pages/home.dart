@@ -4,6 +4,7 @@ import 'package:portfolio_website/utils/globals.dart';
 import '../../utils/constants.dart';
 import 'components/carousel.dart';
 import 'components/cv_section.dart';
+import 'components/education_section.dart';
 import 'components/header.dart';
 import 'components/ios_app_ad.dart';
 import 'components/portfolio_stats.dart';
@@ -77,6 +78,7 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 28.0),
               child: PortfolioStats(),
             ),
+            EducationSection(),
           ],
         ),
       ),
