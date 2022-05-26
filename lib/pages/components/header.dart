@@ -1,34 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/model/header_item.dart';
 import 'package:portfolio_website/utils/constants.dart';
+import 'package:portfolio_website/utils/list_items.dart';
 import 'package:portfolio_website/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../utils/globals.dart';
-
-List<HeaderItem> headerItems = [
-  HeaderItem(
-    title: "Home",
-    onTap: () {},
-  ),
-  HeaderItem(
-    title: "About",
-    onTap: () {},
-  ),
-  HeaderItem(
-    title: "Projects",
-    onTap: () {},
-  ),
-  HeaderItem(
-    title: "Contact",
-    onTap: () {},
-  ),
-  HeaderItem(
-    title: "Hire Me",
-    onTap: () {},
-    isButton: true,
-  ),
-];
 
 Widget _buildHeaderLogo() {
   return MouseRegion(
@@ -68,7 +44,7 @@ Widget _buildHeaderRow() {
     visible: false,
     visibleWhen: [Condition.largerThan(name: MOBILE)],
     child: Row(
-      children: headerItems
+      children: ListItems.headerItems
           .map((item) => item.isButton!
               ? MouseRegion(
                   cursor: SystemMouseCursors.click,

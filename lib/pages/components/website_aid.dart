@@ -18,7 +18,6 @@ class WebsiteAid extends StatelessWidget {
 }
 
 Widget _buildUi(BuildContext context, double width) {
-  print(MediaQuery.of(context).size.width * .8);
   return Center(
     child: LayoutBuilder(
       builder: (context, constraints) {

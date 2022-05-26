@@ -3,6 +3,7 @@ import 'package:portfolio_website/pages/components/footer.dart';
 import 'package:portfolio_website/pages/components/skill_section.dart';
 import 'package:portfolio_website/pages/components/testimonials.dart';
 import 'package:portfolio_website/utils/globals.dart';
+import 'package:portfolio_website/utils/list_items.dart';
 
 import '../../utils/constants.dart';
 import 'components/carousel.dart';
@@ -28,7 +29,7 @@ class Home extends StatelessWidget {
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
             child: ListView.separated(
                 itemBuilder: (BuildContext context, int index) {
-                  return headerItems[index].isButton!
+                  return ListItems.headerItems[index].isButton!
                       ? MouseRegion(
                           cursor: SystemMouseCursors.click,
                           child: Container(
@@ -39,9 +40,9 @@ class Home extends StatelessWidget {
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 28.0),
                             child: TextButton(
-                              onPressed: headerItems[index].onTap,
+                              onPressed: ListItems.headerItems[index].onTap,
                               child: Text(
-                                headerItems[index].title!,
+                                ListItems.headerItems[index].title!,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 13.0,
@@ -53,7 +54,7 @@ class Home extends StatelessWidget {
                         )
                       : ListTile(
                           title: Text(
-                            headerItems[index].title!,
+                            ListItems.headerItems[index].title!,
                             style: const TextStyle(
                               color: Colors.white,
                             ),
@@ -63,7 +64,7 @@ class Home extends StatelessWidget {
                 separatorBuilder: (BuildContext context, int index) {
                   return const SizedBox(height: 10.0);
                 },
-                itemCount: headerItems.length),
+                itemCount: ListItems.headerItems.length),
           ),
         ),
       ),

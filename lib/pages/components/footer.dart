@@ -1,36 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/utils/all_items.dart';
 import 'package:portfolio_website/utils/constants.dart';
 import 'package:portfolio_website/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
-
-import '../../model/footer_item.dart';
-
-final List<FooterItem> footerItems = [
-  FooterItem(
-    iconPath: "assets/mappin.png",
-    title: "ADDRESS",
-    text1: "999 Carter Street",
-    text2: "Sailor Springs, IL 64234",
-  ),
-  FooterItem(
-    iconPath: "assets/phone.png",
-    title: "PHONE",
-    text1: "+1 618-689-9604",
-    text2: "+1 781-689-9632",
-  ),
-  FooterItem(
-    iconPath: "assets/email.png",
-    title: "EMAIL",
-    text1: "hello@example.com",
-    text2: "info@flutterpanda.com",
-  ),
-  FooterItem(
-    iconPath: "assets/whatsapp.png",
-    title: "WHATSAPP",
-    text1: "+234 901-134-0095",
-    text2: "+234 901-134-0095",
-  )
-];
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -60,7 +32,7 @@ class Footer extends StatelessWidget {
                   child: Wrap(
                     spacing: 20.0,
                     runSpacing: 20.0,
-                    children: footerItems
+                    children: ListItems.footerItems
                         .map(
                           (footerItem) => SizedBox(
                             height: 120.0,

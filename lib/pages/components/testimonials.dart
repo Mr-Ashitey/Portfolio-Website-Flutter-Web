@@ -1,26 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/utils/constants.dart';
+import 'package:portfolio_website/utils/list_items.dart';
 import 'package:portfolio_website/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
-
-import '../../model/testimonial.dart';
-
-final List<Testimonial> testimonials = [
-  Testimonial(
-    text:
-        "This is a testimonial text from Janny Stone. Michele is a professional at what he does and never ceases to amaze me with his beautiful works. I will like to work with him in the future again.",
-    occupation: "Product Designer",
-    personName: "JANNY STONE",
-    profilePhoto: "assets/female.png",
-  ),
-  Testimonial(
-    text:
-        "This is a testimonial text from Ken Williams. Michele is a professional at what he does and never ceases to amaze me with his beautiful works. I will like to work with him in the future again.",
-    occupation: "Art Director",
-    personName: "KEN WILLIAMS",
-    profilePhoto: "assets/male.png",
-  )
-];
 
 class Testimonials extends StatelessWidget {
   const Testimonials({Key? key}) : super(key: key);
@@ -86,7 +68,7 @@ class Testimonials extends StatelessWidget {
                       ? Axis.vertical
                       : Axis.horizontal,
                   // Lets map
-                  children: testimonials.map((testimonial) {
+                  children: ListItems.testimonials.map((testimonial) {
                     return Expanded(
                       flex: ScreenHelper.isMobile(context) ? 0 : 1,
                       child: Container(

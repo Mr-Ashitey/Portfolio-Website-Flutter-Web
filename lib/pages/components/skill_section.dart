@@ -1,32 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/utils/list_items.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import '../../model/skill.dart';
 import '../../utils/constants.dart';
 import '../../utils/screen_helper.dart';
-
-List<Skill> skills = [
-  Skill(
-    skill: "Dart",
-    percentage: 62,
-  ),
-  Skill(
-    skill: "Javascript",
-    percentage: 80,
-  ),
-  Skill(
-    skill: "PHP",
-    percentage: 78,
-  ),
-  Skill(
-    skill: "Python",
-    percentage: 90,
-  ),
-  Skill(
-    skill: "GoLang",
-    percentage: 40,
-  ),
-];
 
 class SkillSection extends StatelessWidget {
   const SkillSection({Key? key}) : super(key: key);
@@ -87,7 +64,7 @@ class SkillSection extends StatelessWidget {
                       ),
                       const SizedBox(height: 15.0),
                       Column(
-                        children: skills
+                        children: ListItems.skills
                             .map(
                               (skill) => Container(
                                 margin: const EdgeInsets.only(bottom: 15.0),

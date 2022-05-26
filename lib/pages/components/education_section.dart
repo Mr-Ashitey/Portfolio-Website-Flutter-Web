@@ -1,36 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/utils/all_items.dart';
 import 'package:portfolio_website/utils/constants.dart';
 import 'package:portfolio_website/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
-
-import '../../model/education.dart';
-
-final List<Education> educationList = [
-  Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2019 - PRESENT",
-  ),
-  Education(
-    description:
-        "This is a sample education and details about it is stated below.This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2018 - 2019",
-  ),
-  Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2017 - 2018",
-  ),
-  Education(
-    description:
-        "This is a sample education and details about it is stated below. This is a sample education and details about it is stated below",
-    linkName: "www.flutterpanda.com",
-    period: "2016 - 2017",
-  ),
-];
 
 class EducationSection extends StatelessWidget {
   const EducationSection({Key? key}) : super(key: key);
@@ -84,7 +56,7 @@ class EducationSection extends StatelessWidget {
                 return Wrap(
                     spacing: 20.0,
                     runSpacing: 20.0,
-                    children: educationList
+                    children: ListItems.educationList
                         .map((education) => SizedBox(
                               width: constraints.maxWidth / 2.0 - 20.0,
                               child: Column(

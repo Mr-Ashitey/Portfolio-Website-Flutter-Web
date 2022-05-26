@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/utils/constants.dart';
+import 'package:portfolio_website/utils/list_items.dart';
 import 'package:portfolio_website/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
-
-import '../../model/stat.dart';
-
-final List<Stat> stats = [
-  Stat(count: "43", text: "Clients"),
-  Stat(count: "68+", text: "Projects"),
-  Stat(count: "17", text: "Awards"),
-  Stat(count: "10", text: "Years\nExperience"),
-];
 
 class PortfolioStats extends StatelessWidget {
   const PortfolioStats({Key? key}) : super(key: key);
@@ -37,7 +29,7 @@ class PortfolioStats extends StatelessWidget {
         return Wrap(
           spacing: 20.0,
           runSpacing: 20.0,
-          children: stats.map(
+          children: ListItems.stats.map(
             (stat) {
               return Container(
                 padding: const EdgeInsets.symmetric(vertical: 15.0),

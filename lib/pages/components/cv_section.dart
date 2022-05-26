@@ -1,36 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/model/design_process.dart';
+import 'package:portfolio_website/utils/all_items.dart';
 import 'package:portfolio_website/utils/screen_helper.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../utils/constants.dart';
-
-final List<DesignProcess> designProcess = [
-  DesignProcess(
-    title: "DESIGN",
-    imagePath: "assets/design.png",
-    subtitle:
-        "A full stack allround designer thay may or may not include a guide for specific creative",
-  ),
-  DesignProcess(
-    title: "DEVELOP",
-    imagePath: "assets/develop.png",
-    subtitle:
-        "A full stack allround developer thay may or may not include a guide for specific creative",
-  ),
-  DesignProcess(
-    title: "WRITE",
-    imagePath: "assets/write.png",
-    subtitle:
-        "A full stack allround writer thay may or may not include a guide for specific creative",
-  ),
-  DesignProcess(
-    title: "PROMOTE",
-    imagePath: "assets/promote.png",
-    subtitle:
-        "A full stack allround promoter thay may or may not include a guide for specific creative",
-  ),
-];
 
 class CvSection extends StatelessWidget {
   const CvSection({Key? key}) : super(key: key);
@@ -110,12 +83,12 @@ class CvSection extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Image.asset(
-                              designProcess[index].imagePath!,
+                              ListItems.designProcess[index].imagePath!,
                               width: 40.0,
                             ),
                             const SizedBox(width: 15.0),
                             Text(
-                              designProcess[index].title!,
+                              ListItems.designProcess[index].title!,
                               style: const TextStyle(
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.w700,
@@ -126,7 +99,7 @@ class CvSection extends StatelessWidget {
                         ),
                         const SizedBox(height: 15.0),
                         Text(
-                          designProcess[index].subtitle!,
+                          ListItems.designProcess[index].subtitle!,
                           style: const TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
@@ -136,7 +109,7 @@ class CvSection extends StatelessWidget {
                       ],
                     );
                   },
-                  itemCount: designProcess.length,
+                  itemCount: ListItems.designProcess.length,
                 );
               },
             ),
