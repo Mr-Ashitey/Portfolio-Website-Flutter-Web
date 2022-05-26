@@ -6,6 +6,7 @@ import 'components/carousel.dart';
 import 'components/cv_section.dart';
 import 'components/header.dart';
 import 'components/ios_app_ad.dart';
+import 'components/portfolio_stats.dart';
 import 'components/website_aid.dart';
 
 class Home extends StatelessWidget {
@@ -72,6 +73,7 @@ class Home extends StatelessWidget {
             IosAppAd(),
             SizedBox(height: 70.0),
             WebsiteAid(),
+            PortfolioStats(),
           ],
         ),
       ),
